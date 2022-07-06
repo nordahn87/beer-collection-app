@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-const AddBeer = (props) => {
+const AddBeer = () => {
 
     const [beerNameValue, setBeerNameValue] = useState('')
     const [beerTaglineValue, setBeerTaglineValue] = useState('')

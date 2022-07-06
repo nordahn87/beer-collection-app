@@ -1,4 +1,4 @@
-import Beers from "./components/beers";
+import Beers from './components/beers'
 import './styles/style.css'
 
 function App() {

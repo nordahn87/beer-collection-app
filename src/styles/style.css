@@ -14,6 +14,7 @@ li + li {
 
 h1, h2, h3 {
      margin-bottom: 10px;
+     text-align: center;
 }
 
 main {
@@ -26,10 +27,37 @@ input  {
     margin-bottom: 10px;
 }
 
-.beer-card {
+button {
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(0, 219, 109);
     padding: 20px;
-    background-color: rgb(213, 213, 213);
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000000;
 }
+
+.beer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+}
+
+.beer-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0px 6px 15px 4px rgba(0,0,0,0.22);
+    margin: 20px;
+}    
+
+.beer-card-container {
+    display: flex;
+    justify-content: center;
+}    
 
 .beer-wrapper {
     display: grid;
@@ -46,4 +74,22 @@ input  {
     background-color: white;
     padding: 20px;
     height: 100%;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;  
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+    padding: 30px;
+}
+
+.close {
+    right: -100%;
+}
+
+.open {
+    width: 100%;
+    right: 0;
 }
