@@ -3,11 +3,11 @@ const SideBar = (props) => {
         <div id="Sidebar" className={(props.sidebar ? 'open' : 'close') + ' sidebar'}>
             <button onClick={props.toogleSidebar}>Close</button>
             <div>
-                <h2>{props.name}</h2>
+                <h2>Name:{props.name}</h2>
                 <div>
                     <img className="beer-img" src={props.imgUrl}></img>
                 </div>
-                <h3>{props.tagline}</h3>
+                <h3>Tagline:{props.tagline}</h3>
             </div>
             <h2>
                 Details
