@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Comments from './comments/comments'
 
 const SideBar = (props) => {
 
@@ -63,6 +64,7 @@ const SideBar = (props) => {
                     <p className="bg-gray-100 p-6">{beer.description}</p>
                 </li>
             </ul>
+            <Comments />
         </section>
     )
 }

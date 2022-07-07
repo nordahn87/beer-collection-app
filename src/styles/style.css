@@ -20,7 +20,6 @@ li + li {
     margin-top: 10px;
 }
 
-
 main {
     max-width: 1366px;
     width: 100%;
@@ -28,104 +27,15 @@ main {
 }
 
 input  {
+    padding: 10px;
     margin-bottom: 10px;
 }
 
-.list-item {
-    display: flex;
-    align-items: center;
-}
-
-.card-button {
-    border: none;
-    border-radius: 20px;
-    background-color: rgb(0, 219, 109);
-    padding: 20px;
-    width: 160px;
-    font-size: 1rem;
-    font-weight: 700;
-    color: #000000;
-}
-
-.card-button {
-    border: none;
-    border-radius: 20px;
-    background-color: rgb(188, 188, 188);
-    color: rgb(56, 56, 56);
-    padding: 20px;
-    font-size: 1rem;
-    font-weight: 700;
-    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.57);
-    transition: all 0.1s ease-in-out;
-}
-
-.card-button:hover {
-    background-color: rgb(161, 161, 161);
-    box-shadow: inset 0px 2px 6px 0px rgba(0,0,0,0.57);
-    transition: all 0.1s ease-in-out;
-}
-
-
-
-
-
-
-
-
-
 .card-shadow {
-
-box-shadow: 0px 7px 12px 0px rgba(0,0,0,0.34);   
-}    
-
-.beer-card-container {
-    display: flex;
-    justify-content: center;
+    box-shadow: 0px 7px 12px 0px rgba(0,0,0,0.34);   
 }    
 
 .beer-img {
     max-height: 200px;
     height: 100%;
-}
-
-.beer-card-details {
-    background-color: white;
-    padding: 20px;
-    height: 100%;
-}
-
-
-/* SORT MENU */
-#sort-menu {
-    padding: 20px;
-    background-color: rgb(232, 232, 232);
-}
-
-.sort-menu-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.sort-button {
-    border: none;
-    border-radius: 20px;
-    background-color: rgb(188, 188, 188);
-    color: rgb(56, 56, 56);
-    padding: 20px;
-    font-size: 1rem;
-    font-weight: 700;
-    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.57);
-    transition: all 0.1s ease-in-out;
-}
-
-.sort-button:hover {
-    background-color: rgb(161, 161, 161);
-    box-shadow: inset 0px 2px 6px 0px rgba(0,0,0,0.57);
-    transition: all 0.1s ease-in-out;
-}
-
-
-input {
-    padding: 10px;
 }
