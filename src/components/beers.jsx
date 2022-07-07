@@ -26,7 +26,9 @@ const Beers = () => {
     }
 
     return (
+        
         <main>
+            {/* {console.log(beers)} */}
             <Sidebar
                 id={beerID}
                 sidebar={sidebar} 
@@ -35,6 +37,7 @@ const Beers = () => {
             <div className="beer-wrapper">
                 {
                     beers.map((item) => {
+                        console.log(item.id)
                         return (
                             <Beer
                                 key={item.id}

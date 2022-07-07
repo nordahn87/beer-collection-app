@@ -11,21 +11,17 @@ const AddBeer = (props) => {
     const addValues = () => {
 
         let tmpBeers = props.beers
-        let hund = props.id
 
         const objAddBeer = {
-            id: 99999,
+            id: tmpBeers.length + 1,
             name: beerNameValue,
             tagline: beerTaglineValue,
+            image_url: "",
             first_brewed: beerYearValue,
             description: beerDescriptionValue
         }
-
-        tmpBeers.push(objAddBeer)
-        props.setBeers(tmpBeers)
-
-        alert("A new beer is added to your fine collection milord")
-        console.log(tmpBeers)
+        
+        props.setBeers([...tmpBeers, objAddBeer])
     }
 
 
