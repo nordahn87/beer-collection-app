@@ -28,17 +28,17 @@ const Beers = () => {
 
     return (
 
-        <main>
+        <main className="">
             <Sidebar
                 id={beerID}
                 sidebar={sidebar}
                 toogleSidebar={toogleSidebar} />
 
-            <SortMenu 
+            <SortMenu
                 beers={beers}
                 setBeers={setBeers} />
 
-            <div className="beer-wrapper">
+            <section className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
                 <AddBeer
                     id={beerID}
                     beers={beers}
@@ -56,12 +56,11 @@ const Beers = () => {
                                 abv={item.abv}
                                 description={item.description}
                                 toogleSidebar={toogleSidebar}
-                                setBeerID={setBeerID}
-                            />
+                                setBeerID={setBeerID} />
                         )
                     })
                 }
-            </div>
+            </section>
         </main>
     )
 }

@@ -24,43 +24,46 @@ const SideBar = (props) => {
     }
 
     useEffect(() => {
-       if (props.id !== null) {
-           fetchAPI()
-        }  
+        if (props.id !== null) {
+            fetchAPI()
+        }
     }, [props.id])
 
-    return (  
-        <div id="Sidebar" className={(props.sidebar ? '' : 'close') + ' sidebar'}>
-            <button onClick={props.toogleSidebar}>Close</button>
-            <div>
-                <h2>Name:{beer.name}</h2>
-                <div>
-                    <img className="beer-img" src={beer.image_url} alt="A beer"></img>
-                </div>
-                <h3>{beer.tagline}</h3>
-            </div>
-            <h2>
-                Details
-            </h2>
+    return (
+        <section
+            id="Sidebar" className={(props.sidebar ? 'right-0' : 'right-[-100vw] md:right-[-50vw]') + ' fixed bg-white h-full top-0 w-[100vw] md:w-[50vw] transition-all p-12'}>
+            <button
+                className="bg-gray-300 w-[40px] rounded-full h-[40px] text-xl mb-8"
+                onClick={props.toogleSidebar}>
+                &#10005;
+            </button>
+            <section className="mb-6">
+                <h2 className="text-5xl font-bold">{beer.name}</h2>
+                <h3 className="text-2xl mb-6">{beer.tagline}</h3>
+                <img className="beer-img" src={beer.image_url} alt="A beer"></img>
+            </section>
             <ul>
-                <li className="list-item">
-                    <h3>ABV:</h3>
+                <li className="flex">
+                    <h3 className="mr-3 font-bold">ABV:</h3>
                     <p>Alc {beer.abv}% VOL</p>
                 </li>
-                <li className="list-item">
-                    <h3>Year:</h3>
+                <li className="flex">
+                    <h3 className="mr-3 font-bold">First brewed:</h3>
                     <p>{beer.first_brewed}</p>
                 </li>
-                <li>
-                    <h3>Description</h3>
-                    <p>{beer.description}</p>
+                <li className="flex">
+                    <h3 className="mr-3 font-bold">Boil volume:</h3>
+                    <p>{beer.boil_volume.value} {beer.boil_volume.unit}</p>
                 </li>
-                <li className="list-item">
-                    <h3>Boil volume:</h3>
-                    <p>{beer.boil_volume.value}{beer.boil_volume.unit}</p>
+                <li>
+                    <hr />
+                </li>
+                <li>
+                    <h3 className="mr-3 mb-4 font-bold text-xl">Description</h3>
+                    <p className="bg-gray-100 p-6">{beer.description}</p>
                 </li>
             </ul>
-        </div>
+        </section>
     )
 }
 

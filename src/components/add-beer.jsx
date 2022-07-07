@@ -4,11 +4,11 @@ const AddBeer = (props) => {
 
     const [beerNameValue, setBeerNameValue] = useState('')
     const [beerTaglineValue, setBeerTaglineValue] = useState('')
-    const [beerDescriptionValue, setBeerDescriptionValue] = useState('')
+    const [beerABVValue, setBeerABVValue] = useState('')
 
     const [beerNamErr, setBeerNameErr,] = useState('')
     const [beerTaglineErr, setBeerTaglineErr,] = useState('')
-    const [beerDescriptionErr, setBeerDescriptionErr,] = useState('')
+    const [beerABVErr, setBeerABVErr,] = useState('')
 
     // Validate inputs
     const handleValidation = () => {
@@ -28,11 +28,11 @@ const AddBeer = (props) => {
             setBeerTaglineErr('')
         }
 
-        if (beerDescriptionValue === '') {
-            setBeerDescriptionErr("Description is missing")
+        if (beerABVValue === '') {
+            setBeerABVErr("ABV is missing")
             isValid = false
         } else {
-            setBeerDescriptionErr('')
+            setBeerABVErr('')
         }
         return isValid
     }
@@ -50,7 +50,7 @@ const AddBeer = (props) => {
             name: beerNameValue,
             tagline: beerTaglineValue,
             image_url: "./default.png",
-            description: beerDescriptionValue
+            abv: beerABVValue
         }
 
         props.setBeers([...tmpBeers, objAddBeer])
@@ -61,33 +61,40 @@ const AddBeer = (props) => {
     const handleReset = () => {
         setBeerNameValue('')
         setBeerTaglineValue('')
-        setBeerDescriptionValue('')
+        setBeerABVValue('')
     }
 
     return (
-        <div className="beer-card">
-
-            <h2>Add beer to collection</h2>
-
-            <h3>Beer name</h3>
-            <input type="text" value={beerNameValue}
+        <div className="flex flex-col justify-center items-center bg-green-100 p-6 rounded-3xl card-shadow">
+            <h2 className="text-3xl font-bold">Add a beer</h2>
+            
+            <h3 className="font-bold">Beer name</h3>
+            <input
+                type="text"
+                value={beerNameValue}
                 onChange={(e) => { setBeerNameValue(e.target.value) }} />
             <p>{beerNamErr}</p>
 
-            <h3>Tagline</h3>
-            <input type="text" value={beerTaglineValue}
+            <h3 className="font-bold">Tagline</h3>
+            <input
+                type="text"
+                value={beerTaglineValue}
                 onChange={(e) => { setBeerTaglineValue(e.target.value) }} />
             <p>{beerTaglineErr}</p>
 
-            <h2>Details</h2>
+            <h3 className="font-bold">ABV (Alcohol by volume)</h3>
+            <input
+                type="text"
+                placeholder="E.g. 4,5 or 45"
+                value={beerABVValue}
+                onChange={(e) => { setBeerABVValue(e.target.value) }} />
+            <p>{beerABVErr}</p>
 
-            <h3>Description</h3>
-            <input type="text" value={beerDescriptionValue}
-                onChange={(e) => { setBeerDescriptionValue(e.target.value) }} />
-            <p>{beerDescriptionErr}</p>
-
-            <button onClick={addValues}>Add beer</button>
-
+            <button
+                className="bg-green-300 w-[200px] p-4 rounded-3xl hover:bg-green-400 transition-all"
+                onClick={addValues}>
+                Add beer &#43;
+            </button>
         </div>
     )
 }

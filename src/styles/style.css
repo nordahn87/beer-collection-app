@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
     padding: 0;
     margin: 0;
@@ -69,28 +73,15 @@ input  {
 
 
 
-.beer-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 20px;
-    background-color: rgb(245, 245, 245);
-    box-shadow: 0px 6px 15px 4px rgba(0,0,0,0.22);
-    margin: 20px;
+.card-shadow {
+
+box-shadow: 0px 7px 12px 0px rgba(0,0,0,0.34);   
 }    
 
 .beer-card-container {
     display: flex;
     justify-content: center;
 }    
-
-.beer-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
 
 .beer-img {
     max-height: 200px;
@@ -103,22 +94,6 @@ input  {
     height: 100%;
 }
 
-/* SIDEBAR */
-.sidebar {
-    position: fixed;
- width: 900px;
-    right: 0;
-    top: 0;
-    z-index: 999;
-    background-color: #ffffff;  
-    transition: all 0.3s ease-in-out;
-    height: 100%;
-    padding: 30px;
-}
-
-.close {
-    right: -900px;
-}
 
 /* SORT MENU */
 #sort-menu {
@@ -148,4 +123,9 @@ input  {
     background-color: rgb(161, 161, 161);
     box-shadow: inset 0px 2px 6px 0px rgba(0,0,0,0.57);
     transition: all 0.1s ease-in-out;
+}
+
+
+input {
+    padding: 10px;
 }

@@ -19,7 +19,7 @@ const SortMenu = (props) => {
             if (fa > fb) {
                 return 1; // B is first
             }
-            
+
             return 0; // A and B are equal
         })
 
@@ -78,18 +78,24 @@ const SortMenu = (props) => {
     }
 
     return (
-        <section id="sort-menu">
-            <h2>Sort your awesome beer collection</h2>
-            <div className="sort-menu-container">
+        <section className="mb-6 bg-gray-200 p-6">
+            <h2 className="mr-3 text-2xl font-bold mb-4">
+                Sort your awesome beer collection
+            </h2>
+            
+            <div className="flex gap-4">
                 <SortButton
                     title="Sort by A / Z"
                     sortType={sortByNameAscending} />
+
                 <SortButton
                     title="Sort by Z / A"
                     sortType={sortByNameDescending} />
+
                 <SortButton
                     title="Sort by lowest ABV"
                     sortType={sortByAlcLow} />
+
                 <SortButton
                     title="Sort by highest ABV"
                     sortType={sortByAlcHigh} />
