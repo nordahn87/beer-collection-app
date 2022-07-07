@@ -1,8 +1,6 @@
-import { useState } from "react"
-
 const Beer = (props) => {
 
-    const hund = () => {
+    const beerClickHandler = () => {
         props.setBeerID(props.id)
         props.toogleSidebar()
     }
@@ -12,12 +10,12 @@ const Beer = (props) => {
             <div>
                 <h2>{props.name}</h2>
                 <div className="beer-card-container">
-                    <img className="beer-img" src={props.imgUrl}></img>
+                    <img className="beer-img" src={props.imgUrl} alt="A Beer"></img>
                 </div>
                 <h3>{props.tagline}</h3>
             </div>
             <button
-                onClick={hund}>
+                onClick={beerClickHandler}>
                 See more
             </button>
         </div>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import Beer from './beers/Beer'
+import Beer from './beers/beer'
 import AddBeer from './add-beer'
 import Sidebar from './sidebar'
 
@@ -50,7 +50,10 @@ const Beers = () => {
                         )
                     })
                 }
-                <AddBeer />
+                <AddBeer
+                    id={beerID}
+                    beers={beers} 
+                    setBeers={setBeers}/>
             </div>
         </main>
     )

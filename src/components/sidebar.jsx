@@ -34,7 +34,7 @@ const SideBar = (props) => {
             <div>
                 <h2>Name:{beer.name}</h2>
                 <div>
-                    <img className="beer-img" src={beer.image_url}></img>
+                    <img className="beer-img" src={beer.image_url} alt="A beer"></img>
                 </div>
                 <h3>{beer.tagline}</h3>
             </div>

@@ -79,6 +79,7 @@ button {
 .sidebar {
     position: fixed;
     top: 0;
+    z-index: 999;
     background-color: #ffffff;  
     transition: all 0.3s ease-in-out;
     height: 100%;
