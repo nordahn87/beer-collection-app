@@ -2,6 +2,11 @@ import { useState } from "react"
 
 const Beer = (props) => {
 
+    const hund = () => {
+        props.setBeerID(props.id)
+        props.toogleSidebar()
+    }
+
     return (
         <div className="beer-card">
             <div>
@@ -11,7 +16,10 @@ const Beer = (props) => {
                 </div>
                 <h3>{props.tagline}</h3>
             </div>
-            <button onClick={props.onClick}>See more</button>
+            <button
+                onClick={hund}>
+                See more
+            </button>
         </div>
     )
 }
