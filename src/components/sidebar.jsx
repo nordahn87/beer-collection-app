@@ -7,6 +7,7 @@ const SideBar = (props) => {
         image_url: '',
         tagline: '',
         first_brewed: '',
+        abv: 0,
         description: '',
         boil_volume: {
             value: '',
@@ -42,16 +43,20 @@ const SideBar = (props) => {
                 Details
             </h2>
             <ul>
-                <li>
-                    <h3>Year</h3>
+                <li className="list-item">
+                    <h3>ABV:</h3>
+                    <p>Alc {beer.abv}% VOL</p>
+                </li>
+                <li className="list-item">
+                    <h3>Year:</h3>
                     <p>{beer.first_brewed}</p>
                 </li>
                 <li>
                     <h3>Description</h3>
                     <p>{beer.description}</p>
                 </li>
-                <li>
-                    <h3>Boil volume</h3>
+                <li className="list-item">
+                    <h3>Boil volume:</h3>
                     <p>{beer.boil_volume.value}{beer.boil_volume.unit}</p>
                 </li>
             </ul>

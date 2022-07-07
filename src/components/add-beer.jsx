@@ -4,12 +4,10 @@ const AddBeer = (props) => {
 
     const [beerNameValue, setBeerNameValue] = useState('')
     const [beerTaglineValue, setBeerTaglineValue] = useState('')
-    const [beerYearValue, setBeerYearValue] = useState('')
     const [beerDescriptionValue, setBeerDescriptionValue] = useState('')
 
     const [beerNamErr, setBeerNameErr,] = useState('')
     const [beerTaglineErr, setBeerTaglineErr,] = useState('')
-    const [beerYearErr, setBeerYearErr,] = useState('')
     const [beerDescriptionErr, setBeerDescriptionErr,] = useState('')
 
     // Validate inputs
@@ -28,13 +26,6 @@ const AddBeer = (props) => {
             isValid = false
         } else {
             setBeerTaglineErr('')
-        }
-
-        if (beerYearValue === '') {
-            setBeerYearErr("Year is missing")
-            isValid = false
-        } else {
-            setBeerYearErr('')
         }
 
         if (beerDescriptionValue === '') {
@@ -59,7 +50,6 @@ const AddBeer = (props) => {
             name: beerNameValue,
             tagline: beerTaglineValue,
             image_url: "./default.png",
-            first_brewed: beerYearValue,
             description: beerDescriptionValue
         }
 
@@ -71,7 +61,6 @@ const AddBeer = (props) => {
     const handleReset = () => {
         setBeerNameValue('')
         setBeerTaglineValue('')
-        setBeerYearValue('')
         setBeerDescriptionValue('')
     }
 
@@ -91,11 +80,6 @@ const AddBeer = (props) => {
             <p>{beerTaglineErr}</p>
 
             <h2>Details</h2>
-
-            <h3>Year</h3>
-            <input type="text" value={beerYearValue}
-                onChange={(e) => { setBeerYearValue(e.target.value) }} />
-            <p>{beerYearErr}</p>
 
             <h3>Description</h3>
             <input type="text" value={beerDescriptionValue}

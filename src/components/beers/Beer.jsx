@@ -13,8 +13,9 @@ const Beer = (props) => {
                     <img className="beer-img" src={props.imgUrl} alt="A Beer"></img>
                 </div>
                 <h3>{props.tagline}</h3>
+                <p>Alc {props.abv}% VOL</p>
             </div>
-            <button
+            <button className="card-button"
                 onClick={beerClickHandler}>
                 See more
             </button>

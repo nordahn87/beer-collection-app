@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Beer from './beers/beer'
 import AddBeer from './add-beer'
 import Sidebar from './sidebar'
+import SortMenu from './sort-items/menu'
 
 const Beers = () => {
 
@@ -33,13 +34,15 @@ const Beers = () => {
                 sidebar={sidebar}
                 toogleSidebar={toogleSidebar} />
 
+            <SortMenu 
+                beers={beers}
+                setBeers={setBeers} />
 
             <div className="beer-wrapper">
                 <AddBeer
                     id={beerID}
                     beers={beers}
                     setBeers={setBeers} />
-
                 {
                     beers.map((item) => {
                         return (
@@ -50,6 +53,7 @@ const Beers = () => {
                                 imgUrl={item.image_url}
                                 tagline={item.tagline}
                                 date={item.first_brewed}
+                                abv={item.abv}
                                 description={item.description}
                                 toogleSidebar={toogleSidebar}
                                 setBeerID={setBeerID}
