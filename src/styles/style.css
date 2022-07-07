@@ -37,11 +37,6 @@ button {
     color: #000000;
 }
 
-.beer-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-}
-
 .beer-card {
     display: flex;
     flex-direction: column;
@@ -78,6 +73,8 @@ button {
 
 .sidebar {
     position: fixed;
+ width: 900px;
+    right: 0;
     top: 0;
     z-index: 999;
     background-color: #ffffff;  
@@ -87,10 +84,5 @@ button {
 }
 
 .close {
-    right: -100%;
-}
-
-.open {
-    width: 100%;
-    right: 0;
+    right: -900px;
 }

@@ -29,7 +29,7 @@ const SideBar = (props) => {
     }, [props.id])
 
     return (  
-        <div id="Sidebar" className={(props.sidebar ? 'open' : 'close') + ' sidebar'}>
+        <div id="Sidebar" className={(props.sidebar ? '' : 'close') + ' sidebar'}>
             <button onClick={props.toogleSidebar}>Close</button>
             <div>
                 <h2>Name:{beer.name}</h2>
