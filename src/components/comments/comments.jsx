@@ -18,7 +18,7 @@ const Comments = () => {
     //Problem child :(
     const deleteComment = (index) => {
         let tmpComment = commentValues
-        tmpComment.splice(index)
+        tmpComment.splice(index, 1)
         setCommentValues([...commentValues])
         console.log(index)
     }

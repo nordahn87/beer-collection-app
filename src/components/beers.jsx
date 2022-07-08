@@ -28,7 +28,7 @@ const Beers = () => {
 
     return (
 
-        <main className="">
+        <main>
             <Sidebar
                 id={beerID}
                 sidebar={sidebar}
